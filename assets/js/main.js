@@ -1,8 +1,10 @@
 const pokemonList = document.getElementById('pokemonList');
-const loadMoreButton = document.getElementById('loadMoreButton')
+const loadMoreButton = document.getElementById('loadMoreButton');
+
 maxRecord = 151
 const limit = 12
 let offset = 0;
+
 const pokemonImages = {'bulbasaur':'https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif', 'ivysaur':'https://img.pokemondb.net/sprites/black-white/anim/normal/ivysaur.gif',
 'venusaur':'https://img.pokemondb.net/sprites/black-white/anim/normal/venusaur.gif', 'charmander':'https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif', 
 'charmeleon':'https://img.pokemondb.net/sprites/black-white/anim/normal/charmeleon.gif', 'charizard':'https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif',
@@ -41,9 +43,9 @@ loadPokemonItens(offset, limit)
 loadMoreButton.addEventListener('click', () => {
     offset += limit
     const qtdRecordsWithNextPage = offset + limit
-
+    
     if (qtdRecordsWithNextPage >= maxRecord) {
-        const newLimit = qtdRecordsWithNextPage - maxRecord
+        const newLimit = maxRecord - offset
         loadPokemonItens(offset, newLimit)
     
         loadMoreButton.parentElement.removeChild(loadMoreButton)
