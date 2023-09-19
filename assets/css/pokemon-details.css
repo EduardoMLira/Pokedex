@@ -1,0 +1,78 @@
+.pokemonSpecifications {
+    background-color: #EEF1F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.listSpecifications {
+    width: 50%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+}
+
+.tabBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid rgba(229, 229, 229);
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+}
+
+.tabButton {
+    font-size: 18px;
+    font-weight: 550;
+    color: #E1E3E5;
+    background: none;
+    border: none;
+    padding: 1rem;
+}
+
+.tabButton:focus {
+    outline: none;
+}
+
+.tabBox .tabButton.active{
+    color: purple;
+}
+
+.contentBox {
+    padding: 1rem;
+}
+
+.contentSpecifications {
+    display: none;
+}
+
+.contentSpecifications.active {
+    display: block;
+}
+
+.contentSpecifications li{
+    margin-bottom: 10px;
+}
+
+.line {
+    position: absolute;
+    top: 57px;
+    left: 0;
+    width: 90px;
+    height: 5px;
+    background-color: purple;
+    border-radius: 10px;
+    transition: width 0.4s ease, left 0.3s ease;
+}

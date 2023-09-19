@@ -1,8 +1,8 @@
 const pokemonList = document.getElementById('pokemonList');
 const loadMoreButton = document.getElementById('loadMoreButton');
 
-maxRecord = 151
-const limit = 12
+maxRecord = 18
+const limit = 6
 let offset = 0;
 
 const pokemonImages = {'bulbasaur':'https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif', 'ivysaur':'https://img.pokemondb.net/sprites/black-white/anim/normal/ivysaur.gif',

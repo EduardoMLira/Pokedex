@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specifications</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/pokemon-details.css">
+
+</head>
+<body class="specifications">
+    <section class="pokemonSpecifications">
+        <div class="container">
+            <div class="tabBox">
+                <button id="aboutTab" class="tabButton active">About</button>
+                <button id="baseStatsTab" class="tabButton">Base stats</button>
+                <button id="evolutionTab" class="tabButton">Evolution</button>
+                <button id="movesTab" class="tabButton">Moves</button>
+                <div class="line"></div>
+            </div>
+            
+            <div class="contentBox">
+                <div class="contentSpecifications active">
+                    <ol class="listSpecifications">
+                        <li>Species: <span id="species"></span></li>
+                        <li>Height</li>
+                        <li>Weight</li>
+                        <li>Abilities</li>
+                    </ol>
+
+                    <ol class="listSpecifications">
+                        <h3 class="breeding">Breeding</h3>
+                        <li>Gender</li>
+                        <li>Egg Goups</li>
+                        <li>Egg Cycle</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="contentBox">
+                <div class="contentSpecifications">
+                    <ol class="listSpecifications">
+                        <li>HP</li>
+                        <li>Attack</li>
+                        <li>Defense</li>
+                        <li>Sp.Attack</li>
+                        <li>Sp.Defense</li>
+                        <li>Speed</li>
+                        <li>Total</li>
+                    </ol>
+
+                </div>
+            </div>
+
+            <div class="contentBox">
+                <div class="contentSpecifications">
+                    <h3>Evolution</h3>
+                </div>
+            </div>
+
+            <div class="contentBox">
+                <div class="contentSpecifications">
+                    <h3>Moves</h3>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/specifications.js"></script>
+
+</body>
+</html>
