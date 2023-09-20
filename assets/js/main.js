@@ -9,7 +9,10 @@ const pokemonImages = {'bulbasaur':'https://img.pokemondb.net/sprites/black-whit
 'charmeleon':'https://img.pokemondb.net/sprites/black-white/anim/normal/charmeleon.gif', 'charizard':'https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif',
 'squirtle':'https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif', 'wartortle':'https://img.pokemondb.net/sprites/black-white/anim/normal/wartortle.gif',
 'blastoise':'https://img.pokemondb.net/sprites/black-white/anim/normal/blastoise.gif', 'caterpie':'https://img.pokemondb.net/sprites/black-white/anim/normal/caterpie.gif',
-'metapod':'https://img.pokemondb.net/sprites/black-white/anim/normal/metapod.gif', 'butterfree':'https://img.pokemondb.net/sprites/black-white/anim/normal/butterfree.gif'}
+'metapod':'https://img.pokemondb.net/sprites/black-white/anim/normal/metapod.gif', 'butterfree':'https://img.pokemondb.net/sprites/black-white/anim/normal/butterfree.gif', 'weedle': 
+'https://img.pokemondb.net/sprites/black-white/anim/normal/weedle.gif', 'kakuna': 'https://img.pokemondb.net/sprites/black-white/anim/normal/kakuna.gif', 
+'beedrill': 'https://img.pokemondb.net/sprites/black-white/anim/normal/beedrill.gif','pidgey': 'https://img.pokemondb.net/sprites/black-white/anim/normal/pidgey.gif', 
+'pidgeotto': 'https://img.pokemondb.net/sprites/black-white/anim/normal/pidgeotto.gif', 'pidgeot': 'https://img.pokemondb.net/sprites/black-white/anim/normal/pidgeot.gif'}
 
 function convertPokemonToLi(pokemon) {
     const imageUrl = pokemonImages[pokemon.name.toLowerCase()]
@@ -17,6 +20,7 @@ function convertPokemonToLi(pokemon) {
         <li class="pokemon ${pokemon.type}">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
+            <span class="pokemonInfo">${JSON.stringify(pokemon)}</span>
 
             <div class="details">
                 <ol class="types">
@@ -57,9 +61,11 @@ pokemonList.addEventListener('click', (event) => {
     const clickedPokemon = event.target.closest('.pokemon');
     
     if (clickedPokemon) {
-        const pokemonName = clickedPokemon.querySelector('.name').textContent;
-        
-        window.location.href = `pokemon-specifications.html?pokemon=${pokemonName}`;
+      const pokemonName = clickedPokemon.querySelector(".name").textContent;
+      const pokemonInfo = clickedPokemon.querySelector(".pokemonInfo").textContent;
+      const pokemonInfoParsed = JSON.parse(pokemonInfo);
+      localStorage.setItem("pokemonInfo", JSON.stringify(pokemonInfoParsed));
+
+      window.location.href = `pokemon-specifications.html?pokemon=${pokemonName}`;
     }
 });
-

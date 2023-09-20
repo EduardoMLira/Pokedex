@@ -157,6 +157,10 @@
                -4px -4px 12px #ffffff;
   }
 
+  .pokemonInfo {
+    display: none;
+  }
+  
 @media screen and (min-width: 413px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
